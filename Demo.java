@@ -1,45 +1,35 @@
-class Mobile
+class Human
 {
-    //INSTANCE VARIABLES
-   String brand;
-   int price;
-   //STATIC VARIABLES
-   static String name;
+private int age =11;  //this is accessible in the same class
+private String name ="Navin";
+
+public  int getAge()
+{
+    return age;
+}
 
 
-   static {
-    name ="Phone";
-    System.out.println("inside static block");
-   }
 
-   public Mobile()
+public String getName()
+{
+    return name;
+}
+
+}
+
+
+public class Demo
+{
+   public static void main(String a[]) 
    {
-      brand ="";
-      price = 200;
-      System.out.println("Inside constructor");
+      Human obj = new Human();
+    //   obj.age = 11;
+    //   obj.name="Navin";
+ 
+    //   System.out.println(obj.name);   //won't work coz name is private so to access it you need to access via method which we made inside that class
   
+      System.out.println(obj.getName()+ " : " + obj.getAge());
+
 
    }
-
-   public void show()
-   {
-    System.out.println(brand+ " : "+price+ " : "+name);
-   }
-
-
-    
 }
-
-
-public class Demo {
-public static void main(String [] args) throws ClassNotFoundException
-{ 
-   Class.forName("Mobile");  //this will load class even if object is not created,it not not create the object ,it just instantiate it
-	
-
-   //we will use this feature when we will learn jdbc
-}
-}
-
-
-
