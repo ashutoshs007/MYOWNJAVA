@@ -6,15 +6,28 @@ class Mobile
    //STATIC VARIABLES
    static String name;
 
+
+   //irrespective of how many objects we will create, it will call the static block only once
+   static {
+    name ="Phone";
+    System.out.println("inside static block");
+   }
+
+   public Mobile()
+   {
+      brand ="";
+      price = 200;
+      System.out.println("Inside constructor");
+    //   name="Phone";   //we can initialize a static variable inside a constructor but it will be called everytime we will create an object ,so to deal with this ,we will intialize it inside static block ,same as what we did inside static block above.
+
+   }
+
    public void show()
    {
     System.out.println(brand+ " : "+price+ " : "+name);
    }
 
-public static void show1()
-{
-    System.out.println("in static method");
-}
+
     
 }
 
@@ -26,28 +39,13 @@ public static void main(String [] args){
     obj1.price = 1500;
     Mobile.name = "SmartPhone";
 
-    Mobile obj2 =new Mobile();
-    obj2.brand ="Samsung";
-    obj2.price = 1800;
-    Mobile.name = "SmartPhone";
+     Mobile obj2 =new Mobile();
 
-    Mobile.name ="Phone";
-    obj1.show();
-    obj2.show();
+    
 
-    Mobile.show();  // "Cannot make a static reference to the non-static method show() from the type Mobile"
-
-    Mobile.show1();
 	
 }
 }
 
-//you cannot call a non-static method with the help of  a classname
-// ,that's why you ned object
-
-// you can call a static method directly with the help of a classname 
-
-
-//you cannot use a non-static variable inside a static method,why?
 
 
