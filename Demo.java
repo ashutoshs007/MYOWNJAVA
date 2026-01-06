@@ -7,7 +7,6 @@ class Mobile
    static String name;
 
 
-   //irrespective of how many objects we will create, it will call the static block only once
    static {
     name ="Phone";
     System.out.println("inside static block");
@@ -18,7 +17,7 @@ class Mobile
       brand ="";
       price = 200;
       System.out.println("Inside constructor");
-    //   name="Phone";   //we can initialize a static variable inside a constructor but it will be called everytime we will create an object ,so to deal with this ,we will intialize it inside static block ,same as what we did inside static block above.
+  
 
    }
 
@@ -33,17 +32,12 @@ class Mobile
 
 
 public class Demo {
-public static void main(String [] args){
-    Mobile obj1 =new Mobile();
-    obj1.brand ="Apple";
-    obj1.price = 1500;
-    Mobile.name = "SmartPhone";
-
-     Mobile obj2 =new Mobile();
-
-    
-
+public static void main(String [] args) throws ClassNotFoundException
+{ 
+   Class.forName("Mobile");  //this will load class even if object is not created,it not not create the object ,it just instantiate it
 	
+
+   //we will use this feature when we will learn jdbc
 }
 }
 
