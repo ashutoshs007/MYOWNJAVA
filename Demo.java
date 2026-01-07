@@ -1,26 +1,23 @@
 class Human
 {
 private int age =11;  //this is accessible in the same class
-private String name ="Navin";
-
-public  int getAge()
-{
+private String name ;
+public  int getAge(){
     return age;
 }
 
 public void setAge( int a){
-    age= a;
+    this.age= a;
 }
 
 
-public String getName()
-{
+public String getName(){
     return name;
 }
 
-public void setName(String n)
-{
-    name = n;
+public void setName(String n){
+this.name=n;
+    
 }
 
 }
