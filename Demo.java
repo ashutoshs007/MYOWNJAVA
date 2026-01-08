@@ -1,24 +1,18 @@
-class A
-{
+//Inheritence
 
-    public A()
-    {
-        System.out.println("object created");
-    }
-    public void show()
-    {
-        System.out.println("in A show");
-    }
-}
+
 
 public class Demo
 {
-    public static void main(String a[])
+    public static void main(String[] args)
     {
+     
+        AdvCalc obj =new AdvCalc();
+        int r1=obj.add(4,5);
+        int r2=obj.sub(8,3);
+        int r3=obj.multi(5,3);
+        int r4=obj.div(15,4);
 
-        int marks;
-        marks =99;
-        A obj =new A();
-        obj.show();
+        System.out.println(r1+ " "+r2+" "+r3+" "+r4);
     }
 }
