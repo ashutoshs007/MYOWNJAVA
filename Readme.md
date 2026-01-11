@@ -18,9 +18,16 @@ Constructor:-
 //in constructor ,we do not specift return type
 
 //in constructor- (a special method having same name as class name) ,we do not specift return type
-jh
+
 //a constructor never returns anyting
 
 //we can write the connection of database in the constructor
 
 
+
+
+KOI CODE LIKH KE RKHO JO KHUD SE EXPLAIN KRO THAT I LEARNT THIS YESTERDAY.
+
+
+
+![alt text](image.png)
