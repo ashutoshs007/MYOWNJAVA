@@ -31,3 +31,19 @@ KOI CODE LIKH KE RKHO JO KHUD SE EXPLAIN KRO THAT I LEARNT THIS YESTERDAY.
 
 
 ![alt text](image.png)
+
+
+
+multiple inheritence works in c++ but not in java ,why??
+
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+
+Ambiguity problem in image 3 ,like in multiple inheritence if 
+
+class c has to coose a method which is in bot ha  and b and if c is extending both a and b then if we create an object of c and calls obj.show() where show() is in both a  and b then it will be confusion to call which show() ,a one or b one?? confusion ?? and this problem is called ambiguity problem.   so in java multiple inheritence d0 not work.
+
+![alt text](image-3.png)

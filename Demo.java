@@ -1,6 +1,28 @@
 //Inheritence
 
 
+// THIS MULTIPLE INHERITENCE WORKS IN C++ BUT DO NOT WORK IN JAVA
+// BUT WHY?
+
+// class A{
+
+// }
+
+// class B{
+
+
+// }
+
+// class C extends A,B{
+
+
+// }
+
+
+
+
+
+
 
 public class Demo
 {
