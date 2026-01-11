@@ -20,6 +20,15 @@
 
 
 
+// this() method executes the constructor for same class
+
+// super() method executes the constructor for super class
+
+
+
+
+
+
 class A
 {
    public A()
@@ -54,10 +63,7 @@ class B extends A
      //parameterized constructor
      public B(int n){
 
-        // super();
-        super(n);
-
-
+        this();
            System.out.println("in B int");
      }
 
@@ -72,7 +78,7 @@ public class Demo
 {
     public static void main(String args[])
     {
-       B obj =new B(69); 
+       B obj =new B(35); 
     //    B obj =new B(); 
        //WHENEVER YOU CREATE AN OBJECT IT WILL CALL THE CONSTRUCTOR OF A CLASS
 
