@@ -1,24 +1,50 @@
-//Inheritence
+// super method simply means -call the constructor of a superclass
 
 
-// THIS MULTIPLE INHERITENCE WORKS IN C++ BUT DO NOT WORK IN JAVA
-// BUT WHY?
-
-// class A{
-
-// }
-
-// class B{
 
 
-// }
+class A
+{
+   public A()
+     {
 
-// class C extends A,B{
+        super();
+        System.out.println("in A");
+     }  
 
 
-// }
+     public A(int n){
+
+          super();
+           System.out.println("in A int");
+     }
+    
 
 
+}
+
+
+class B extends A
+{
+     public B()
+     {
+
+        super();
+        System.out.println("in B");
+     }
+
+
+     //parameterized constructor
+     public B(int n){
+
+        super();
+        
+
+           System.out.println("in B int");
+     }
+
+
+}
 
 
 
@@ -26,16 +52,16 @@
 
 public class Demo
 {
-    public static void main(String[] args)
+    public static void main(String args[])
     {
-     
-        VeryAdvCalc obj =new VeryAdvCalc();
-        int r1=obj.add(4,5);
-        int r2=obj.sub(8,3);
-        int r3=obj.multi(5,3);
-        int r4=obj.div(15,4);
-        double r5=obj.power(4,2);
+       B obj =new B(69); 
+       //WHENEVER YOU CREATE AN OBJECT IT WILL CALL THE CONSTRUCTOR OF A CLASS
 
-        System.out.println(r1+ " "+r2+" "+r3+" "+r4+" "+r5);
+       //it will print both 
+    //    in A  & 
+    //    in B  coz. whenever you create object of a calss ,it  will call the constructor of both subclass (B)
+    //    as well as superclass(A).
+
+    // Every constructor in java has a method(even if you don't mention there that method still exists)called super();
     }
 }
