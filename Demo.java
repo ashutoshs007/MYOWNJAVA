@@ -1,30 +1,23 @@
-//method overriding
+// import tools.Calc;
+// import java.util.ArrayList;
+// import tools.AdvCalc;
+ 
+
+package com.google.calculation;  //naming the package
+
+import tools.*;
+import java.lang.*;
 
 
-class Calc
+public class Demo 
 {
-   public int add(int n1,int n2)
-   {
-    return n1+n2;
-   }
+   public static void main (String  a[])
+
+{
+
+   ArrayList list = new ArrayList();
+    Calc obj = new Calc();
+    AdvCalc obj1 = new AdvCalc();
 }
 
-
-class AdvCalc extends Calc
-{
-   public int add(int n1,int n2)
-   {
-    return n1+n2+1;
-   }
-}
-
-
-public class Demo
-{
-    public static void main(String a[])
-    {
-       AdvCalc obj = new AdvCalc();
-       int r1=obj.add(3,4);
-       System.out.println(r1);
-        }
 }
