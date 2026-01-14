@@ -1,9 +1,19 @@
-java.awt,beans,io
-in general ,whatever inbuilt class we use in java belongs to a package
-System is also a class, but whenever we use it we do not improted any package coz by default package java.lang; 
+if you want something to be accessed  outside the package ,always make it public
 
-import java.System;
-OR 
-import java.lang.*;
+private variable can be used in the same class irrespective of any package
 
-import java.util.*;
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+you cannot have 2 public classes in the same file
+
+one file one class(gneenral idea)
+
+try to keep instance variable as private
+
+the methods most of the time will be public
+but if you think if there is a method or variable which should be accessed in a subclass of other packages ,use protected
+try to avoid default.
