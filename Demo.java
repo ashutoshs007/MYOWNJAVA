@@ -1,48 +1,35 @@
+//final keyword -can be used with variable,method,class
 
-
-class A
+class Calc
 {
- public void show(){
-  System.out.println("in A show");
- }
+    public void show()
+    {
+        System.out.println("in Calc Show");
+    }
 
-}
 
-class B extends A 
-{
-   public void show(){
-  System.out.println("in B show");
- }
-    
-}
-class C extends A 
-{
-   public void show(){
-  System.out.println("in C show");
- }
-    
+    public void add(int a,int b)
+    {
+        System.out.println(a+b);
+    }
 }
 
 
 
 
-public class Demo{
+
+public class Demo
+{
     public static void main(String a[])
     {
 
+        final int num =8;  //for constant value eg;22/7 (pi)
 
-        //runtimee polymorphism - coz obj.show() will print whaat is decided on runtime.
-        // and all this concept is called dynamic method dispatch
+         num=9;
 
-        
-A obj =new A();
-obj.show();
+         System.out.println(num);
 
-obj =new B();
-obj.show();
 
-obj=new C();
-obj.show();
-        
+
     }
 }
