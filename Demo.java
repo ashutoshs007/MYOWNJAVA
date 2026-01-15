@@ -1,10 +1,18 @@
 //final keyword -can be used with variable,method,class
 
+
+
+// making a variable as final means making it constant
+//making a class as final means stopping inheritence
+
+//if you made your method final,no method can override it
+
+// final class Calc
 class Calc
 {
-    public void show()
+    public final void show()
     {
-        System.out.println("in Calc Show");
+        System.out.println("By Navin");
     }
 
 
@@ -14,8 +22,15 @@ class Calc
     }
 }
 
+class AdvCalc extends Calc
+{
 
 
+    public void show()
+    {
+        System.out.println("By John");
+    }
+}
 
 
 public class Demo
@@ -23,13 +38,9 @@ public class Demo
     public static void main(String a[])
     {
 
-        final int num =8;  //for constant value eg;22/7 (pi)
-
-         num=9;
-
-         System.out.println(num);
-
-
+   AdvCalc obj = new AdvCalc();
+   obj.show();
+   obj.add(4,5);
 
     }
 }
