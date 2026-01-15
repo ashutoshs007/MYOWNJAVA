@@ -1,14 +1,3 @@
-class Computer
-{
-  
-}
-
-  class Laptop extends Computer
-  {
-
-  }
-
-
 
 
 class A
@@ -26,6 +15,13 @@ class B extends A
  }
     
 }
+class C extends A 
+{
+   public void show(){
+  System.out.println("in C show");
+ }
+    
+}
 
 
 
@@ -35,21 +31,18 @@ public class Demo{
     {
 
 
-        // B obj = new B();
+        //runtimee polymorphism - coz obj.show() will print whaat is decided on runtime.
+        // and all this concept is called dynamic method dispatch
 
-        A obj = new B(); //here reference is of type A  //yes,it is possible to create a reference of a superclass(A) and an object of a subclass(B)
- //THE obj variable type is A here but the implementation is B
-
-
-        //we can mention the type as parent but  the object can be of  child
-        // A obj =new A();
-        obj= new C();
-        obj.show();
-
-        // Laptop obj1 = new Laptop();
-        Computer obj1 = new Laptop();
         
+A obj =new A();
+obj.show();
 
+obj =new B();
+obj.show();
 
+obj=new C();
+obj.show();
+        
     }
 }
