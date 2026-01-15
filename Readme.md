@@ -1,19 +1,36 @@
-if you want something to be accessed  outside the package ,always make it public
+      Polymorphism:-many behaviour
 
-private variable can be used in the same class irrespective of any package
+same person Many          Behaviour at office ,at office ,with friends
 
-![alt text](image.png)
 
-![alt text](image-1.png)
+the same object or reference will have different behaviour
+based on how you create the instance of it
 
-![alt text](image-2.png)
+Types of polymorphism:-
+1.Compile time Polymorphism
+(Early binding)
 
-you cannot have 2 public classes in the same file
+-behaviour is defined at compiled time
 
-one file one class(gneenral idea)
+Method Overloading(which method to execute will be decided at compield time )
 
-try to keep instance variable as private
+add(int,int)
+add(int,int,int)
 
-the methods most of the time will be public
-but if you think if there is a method or variable which should be accessed in a subclass of other packages ,use protected
-try to avoid default.
+
+
+2.Run time Polymorphism
+(Late binding)
+--behaviour is defined at run time
+
+Method Overriding
+{
+    2 CLASS, A AND B
+
+    B extends A 
+
+    add(int,int)
+    add(int,int)
+
+    out of these two merhods ,wich one will get executed ,it will be decided at runtime 
+}
