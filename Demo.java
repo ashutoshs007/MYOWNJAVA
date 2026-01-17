@@ -1,32 +1,39 @@
-//Every class in java extends the object class
+//typecasting
 
-class Laptop
+class A
 {
- int price;
- String model;
-
-
- public String toString()
- {
-  return model + " : "+price;
- }
- 
+   public void show1()
+   {
+    System.out.println("in A show");
+   }
 }
 
-public class Demo
+class B extends A
 {
-    public static void main(String [] args){
-
-Laptop obj = new Laptop();
-  obj.model ="Lenovo Yoga";
-  obj.price=1000;
 
 
-  System.out.println(obj);
-  System.out.println(obj.toString());//Everytime you try to print the object ,it will call toString method even if you don't mention.
-
-   System.out.println(obj); //toString getting called by default
- 
+    public void show2()
+   {
+    System.out.println("in B show");
+   }
 }
 
+
+
+public class Demo{
+    public static void main(String a[])
+    {
+        // double d=4.5;
+        // int i =(int) d;
+
+
+        A obj =(A) new B();
+        obj.show1();  //upcasting
+
+        B obj1 =(B) obj;  //downcasting
+        obj1.show2();
+
+
+
+    }
 }
