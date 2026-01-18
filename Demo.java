@@ -1,39 +1,33 @@
-//typecasting
-
-class A
-{
-   public void show1()
-   {
-    System.out.println("in A show");
-   }
-}
-
-class B extends A
-{
-
-
-    public void show2()
-   {
-    System.out.println("in B show");
-   }
-}
-
-
-
 public class Demo{
-    public static void main(String a[])
-    {
-        // double d=4.5;
-        // int i =(int) d;
+    public static void main(String a[]){
+        int num =7;  //num here is primitive variable
 
 
-        A obj =(A) new B();
-        obj.show1();  //upcasting
-
-        B obj1 =(B) obj;  //downcasting
-        obj1.show2();
+         
+        // Integer num1 = 8; 
 
 
+        // Integer num1 = new Integer(8); //num1 is reference variable
+
+
+        // Integer num1 = new Integer(num); // THIS IS CALLED BOXING(taking a primitive value and storing that in a class object )
+
+        
+         Integer num1 =num; //Auto-boxing
+
+
+         int num2 =num1;  //auto -unboxing //unboxing (coz you are getting value from object type to primitive type)
+        
+
+        System.out.println(num1);
+
+
+
+        String str ="12";
+        int num3 = Integer.parseInt(str);
+        System.out.println(num3*2);
 
     }
+
+
 }

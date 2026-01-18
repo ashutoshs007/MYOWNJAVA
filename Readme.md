@@ -34,3 +34,18 @@ Method Overriding
 
     out of these two merhods ,wich one will get executed ,it will be decided at runtime 
 }
+
+
+
+Java is not purely object oriented coz.Everyting is not an object
+
+
+int,float - primitive types(not object types) so they do not extend object class.
+
+
+
+In array ,we can have primitive type but in
+Collection framework  -we need to have object type
+
+
+
