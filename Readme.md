@@ -48,4 +48,23 @@ In array ,we can have primitive type but in
 Collection framework  -we need to have object type
 
 
+All about abstract:-
+
+
+Abstract method can only belong to abstract class
+
+
+We cannot create object of abstract class
+
+But we can create a reference of abstract class
+
+Car obj = new WagonR();
+
+
+
+We  can create object of a concrete class ,not an abstract class
+
+If you have any abstract methoed ,then make that class as abstract/
+
+
 
