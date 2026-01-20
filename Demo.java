@@ -1,89 +1,55 @@
-abstract class Car
+class A 
 {
-public void drive(); //declaring a method like this will give your error (you cannot create object of this ),to declare a method ,use abstract keyword or the above thing will give error 
-
-
-public  abstract void drive();
-public  abstract void fly();
-
-
-
-// public void drive(){
-
-    //defining a method
-// }
-
-
-     
-public void playMusic()
-{
-System.out.println("play music");
-
-}
-
-}
-
-
-//if you have a class which extends abstract class then it should must implement all the abstract methods of that abstract class otherwise it will give an error ,
-
-// If in case it is not able to immplement all abstract method of superclass then make that subclass as abstract as well
-
-
-// class WagonR extends Car
-// {
-
-   abstract class WagonR extends Car
-{
-     
-    public void drive()
+   
+    int age;
+    public void show()
     {
-       System.out.println("Driving"); 
+
+     System.out.println("in show");
     }
 
+    static class B
+    {
 
-    // public void fly(){
-    //     System.out.println("Flying");
-    // }
+        public void config()
+        {
+            System.out.println("in config");
+        }
+    }
     
 }
 
 
 
-// now if above class WagonR is abostract class ,we cannot create object of it as well
-// so we need to create a new class
 
-
-class UpdatedWagonR extends WagonR    //CONCRETE CLASS
-{     
-    @Override
-    public void fly(){
-        System.out.println("Flying");
-    }
-
-} 
-
-
-
-
-
-
-public class Demo
+public class Demo 
 {
+    
+
     public static void main(String a[])
     {
-    //    Car obj = new Car();
-    //    obj.drive();
-    //    obj.playMusic();
+     
+        A obj =new A();
+       obj.show();
 
-    //    Car obj = new WagonR();
-    //    obj.drive();  //CALLS DRIVE OF WagonR
-    //    obj.playMusic();
+       A.B obj 1 = obj.new B(); //if you want to create an object of B ,you need object of A first
 
 
-    //    Car obj = new UpdatedWagonR();
-    //    obj.drive();
-    //    obj.playMusic();
+        //    A.B obj 1 = new A.B(); //this will work only when inner class is static 
 
+       obj1.config();
+
+    //    show is a non -static method ,to call it you need object,in the same way if you want to create object of B ,you need object of A coz. that is a non-static method.
+
+    //when we refer to a static class we do not need object
+       
 
     }
 }
+
+
+
+
+// static can be used for only inner class
+
+// outer modifier can be only public ,abstract and final are permitted
