@@ -1,55 +1,40 @@
+//Anonymous inner class
+
+
 class A 
 {
-   
-    int age;
     public void show()
     {
-
-     System.out.println("in show");
+        System.out.println("in a Show");
     }
+}
 
-    static class B
+class B extends A
+{
+    public void show()
     {
-
-        public void config()
-        {
-            System.out.println("in config");
-        }
+         System.out.println("in B show");
     }
-    
 }
 
 
-
-
-public class Demo 
+public class Demo
 {
-    
-
     public static void main(String a[])
     {
-     
-        A obj =new A();
-       obj.show();
 
-       A.B obj 1 = obj.new B(); //if you want to create an object of B ,you need object of A first
+        A obj =new A(){
+            
+                public void show(){
 
+                    System.out.println("in new show");
+                }
+            
+        };
 
-        //    A.B obj 1 = new A.B(); //this will work only when inner class is static 
-
-       obj1.config();
-
-    //    show is a non -static method ,to call it you need object,in the same way if you want to create object of B ,you need object of A coz. that is a non-static method.
-
-    //when we refer to a static class we do not need object
-       
-
+        obj.show();
     }
 }
 
 
-
-
-// static can be used for only inner class
-
-// outer modifier can be only public ,abstract and final are permitted
+//Demo$1.java is anoymous inner class ,we can change the definition of class during object creation ,and that class is called anonymous class which has no name.
