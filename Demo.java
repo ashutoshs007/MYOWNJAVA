@@ -1,21 +1,24 @@
 //Anonymous inner class
 
 
-class A 
+abstract class A 
 {
-    public void show()
-    {
-        System.out.println("in a Show");
-    }
+    public  abstract void show();
+   
 }
 
-class B extends A
-{
-    public void show()
-    {
-         System.out.println("in B show");
+
+
+class B extends A{
+
+    public void show(){
+    System.out.println("in B show");
     }
+
 }
+
+
+
 
 
 public class Demo
@@ -23,18 +26,25 @@ public class Demo
     public static void main(String a[])
     {
 
-        A obj =new A(){
-            
-                public void show(){
+    //    A obj =new A();    //won't work coz. you cannot instantiate 
+        // the abstract class so just extend A using B then provide implementation there 
+    
 
-                    System.out.println("in new show");
-                }
-            
-        };
 
-        obj.show();
+    //    A obj =new B(); 
+    //    obj.show(); 
+
+       A obj = new A()  //here we can do this coz. we are creating the object of anonymous ineer class
+       {
+
+         public void show()
+         {
+    System.out.println("in new show");
+    }
+       };
+
+       obj.show();
     }
 }
 
 
-//Demo$1.java is anoymous inner class ,we can change the definition of class during object creation ,and that class is called anonymous class which has no name.
