@@ -1,57 +1,60 @@
+//class-class-->extends
+//class-interface-->implements
+//-inteface-interface-->extends
 
 
-// abstract class Computer
-// {
 
-//     abstract public void code();
-    
-// }
 
-interface Computer
+interface A 
+{
+   
+    void show();
+    void config();
+}
+
+
+interface X{
+    void run();
+}
+
+
+
+
+interface Y extends X
 {
 
-     void code();
-    
+
+
 }
 
 
 
 
 
-// class Laptop extends Computer
-class Laptop implements Computer
+
+
+//  B is not abstract and does not override abstract method run() in X
+
+
+// one class can implement multiple interfaces but this is not the case with abstract class
+// coz. an abstract class can extend only one class
+
+
+
+class B implements A,X
 {
-    public void code()
+    public void show()
     {
-        System.out.println("code,compile,run");
+        System.out.println("in show");
     }
-}
 
-
-// class Desktop extends Computer
-class Desktop implements Computer
-{
-    public void code()
+    public void config()
     {
-        System.out.println("code,compile,run:Final");
+        System.out.println("in config");
     }
-}
 
-
-
-
-
-
-//we are doing tight coupling here by saying that developer is dependent on laptop only and if he got desktop someday ,he cannot work ,but no developer is depended on a Computer ,a Computer can be a Laptop ,it can be a Desktop as well
-
-class Developer
-{
-    // public void devApp(Laptop lap)
-
-    public void devApp(Computer lap)
-    {
-        // System.out.println("coding..");
-        lap.code();
+    public void run(){
+    System.out.println("running");
     }
 }
 
@@ -61,25 +64,19 @@ public class Demo
 {
     public static void main(String a[])
     {
+         A obj ;
+         obj = new B();
+         obj.show();
+         obj.config();
 
-        // Laptop lap =new Laptop();
+         obj.run();//do not work coz obj is for B which has no run method ,that is in X
 
-        Computer  lap =new Laptop();   //interface reference not class reference
+         X obj1 = new B();
+         obj1.run();//NOW IT WORKS 
 
-        // Desktop desk =new Desktop();
-
-        Computer desk =new Desktop();
-
-        Developer navin = new Developer();
-
-        // navin.devApp(lap);
-        navin.devApp(lap);
-        navin.devApp(desk);
+         //HERE IS ALSO SAME CASE,WE CANNOT CALL OTHER TWO METHODS IN A  WITH THE HELP OF OBJ1 COZ OBJ1 IS OBJECT OF X
 
 
+         System.out.println(A.area);
     }
 }
-
-
-
-//so that's how you design application to make it loosly coupled where your developer object is not dependent on Laptop or Desktop ,it is depended on Computer
