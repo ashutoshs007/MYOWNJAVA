@@ -1,82 +1,48 @@
-//class-class-->extends
-//class-interface-->implements
-//-inteface-interface-->extends
+
+// import java.util.Collection;
+import java.util.ArrayList;
+import java.util.List;
 
 
 
+public class Demo{
 
-interface A 
-{
-   
-    void show();
-    void config();
-}
+    public static void main(String [] args) {
 
 
-interface X{
-    void run();
-}
+// Collection<Integer> nums = new ArrayList<Integer>();
+List<Integer> nums = new ArrayList<Integer>();
+
+nums.add(6);
+nums.add(5);
+nums.add(8);
+nums.add(2);
 
 
-
-
-interface Y extends X
-{
+// ArrayList is a class which implements a list and list does have a method called get because list works with index values ,so if you want to work with index value ,sue List instead of Collection
 
 
 
-}
+//INTEGER,FLOAT CLASSES ,ALL THESE CLASSES EXTEND THE OBJECT CLASS
+
+// AND BY DEFAULT
+
+// Collection API WORK WITH OBJECTS
+
+// 6,5,8,2 ARE NOT INTEGERS THEY ARE OBJECTS AND THAT'S WHY WE CANNOT STORE THEM INTO INTEGERS
+
+// TO SOLVE THIS PROBLEM ,USE GENERICS
+
+// Collection normally work with objects ,not with primitive values 
+
+System.out.println(nums.get(2));
+System.out.println(nums.indexOf(5));
 
 
-
-
-
-
-
-//  B is not abstract and does not override abstract method run() in X
-
-
-// one class can implement multiple interfaces but this is not the case with abstract class
-// coz. an abstract class can extend only one class
-
-
-
-class B implements A,X
-{
-    public void show()
+  for(int n:nums)
     {
-        System.out.println("in show");
-    }
+        System.out.println(n);
+    }    
 
-    public void config()
-    {
-        System.out.println("in config");
-    }
-
-    public void run(){
-    System.out.println("running");
-    }
-}
-
-
-
-public class Demo
-{
-    public static void main(String a[])
-    {
-         A obj ;
-         obj = new B();
-         obj.show();
-         obj.config();
-
-         obj.run();//do not work coz obj is for B which has no run method ,that is in X
-
-         X obj1 = new B();
-         obj1.run();//NOW IT WORKS 
-
-         //HERE IS ALSO SAME CASE,WE CANNOT CALL OTHER TWO METHODS IN A  WITH THE HELP OF OBJ1 COZ OBJ1 IS OBJECT OF X
-
-
-         System.out.println(A.area);
     }
 }
