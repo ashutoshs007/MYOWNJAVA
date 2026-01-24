@@ -1,49 +1,58 @@
+enum Laptop{
 
-// import java.util.Collection;
-import java.util.ArrayList;
-import java.util.List;
-
-
-
-public class Demo{
-
-    public static void main(String [] args) {
+    // 4 objects will call constructor 4 times
+    //one time default constructor will be called and 3 times parametarized constructor will be called
 
 
-// Collection<Integer> nums = new ArrayList<Integer>();
-List<Integer> nums = new ArrayList<Integer>();
+    Macbook(2000) ,XPS(2200),Surface,ThinkPad(1800);
 
-nums.add(6);
-nums.add(5);
-nums.add(8);
-nums.add(2);
-nums.add(6);
-
-
-// ArrayList is a class which implements a list and list does have a method called get because list works with index values ,so if you want to work with index value ,sue List instead of Collection
+//    that's how private constructor works where we can create the object in the same class
 
 
 
-//INTEGER,FLOAT CLASSES ,ALL THESE CLASSES EXTEND THE OBJECT CLASS
+    private int price;
 
-// AND BY DEFAULT
+    private Laptop(){
+        price=500;
+    }
 
-// Collection API WORK WITH OBJECTS
-
-// 6,5,8,2 ARE NOT INTEGERS THEY ARE OBJECTS AND THAT'S WHY WE CANNOT STORE THEM INTO INTEGERS
-
-// TO SOLVE THIS PROBLEM ,USE GENERICS
-
-// Collection normally work with objects ,not with primitive values 
-
-System.out.println(nums.get(2));
-System.out.println(nums.indexOf(5));
+    private Laptop(int price){
+        this.price=price;
+        System.out.println(" in Laptop "+this.name());
+    }
 
 
-  for(int n:nums)
+    public int getPrice(){
+        return price;
+    }
+
+    public void setPrice(int price){
+        this.price=price;
+    }
+
+}
+
+
+
+public class Demo
+{
+    public static void main(String a[])
     {
-        System.out.println(n);
-    }    
+
+
+        // Laptop lap = Laptop.Macbook;
+        // System.out.println(lap + " : " +lap.getPrice());
+
+
+        //need all laptops price
+
+        for(Laptop lap: Laptop.values())
+        {
+            System.out.println(lap + " : " +lap.getPrice());
+
+        }
+
+
 
     }
 }
