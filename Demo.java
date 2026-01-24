@@ -17,6 +17,7 @@ nums.add(6);
 nums.add(5);
 nums.add(8);
 nums.add(2);
+nums.add(6);
 
 
 // ArrayList is a class which implements a list and list does have a method called get because list works with index values ,so if you want to work with index value ,sue List instead of Collection
