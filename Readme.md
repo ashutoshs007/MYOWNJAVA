@@ -41,3 +41,6 @@ int nums[] =new int[5]; -->
         // For Queue-we have Dequeue
 
 
+![alt text](image-3.png)
+
+![alt text](image-4.png)
