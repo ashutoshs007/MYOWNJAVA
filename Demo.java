@@ -1,21 +1,12 @@
-class A
+// Functional interface is a interface which only has one method
+
+
+@FunctionalInterface
+interface A
 {
- public void showTheDataWhichBelongsToThisClass()
-   {
-    System.out.println("in A show");
-   }
+ void show( int i);
 }
 
-class B extends A
-{
-
-    @Override
-//    public void showTheDataWhichBelongToThisClass()
-   public void showTheDataWhichBelongsToThisClass()
-   {
-    System.out.println("in  B show");
-   }
-}
 
 
 
@@ -24,7 +15,19 @@ public class Demo
     public static void main(String a[])
     {
 
-     B obj = new B();
-     obj.showTheDataWhichBelongsToThisClass();
+
+      //Below trying to instantiate the class which implements the interface
+
+    //  A obj = new A()  
+    //  {
+    //     public void show()
+
+    // another way of writing above thign is using lambda expression which has been written below
+
+    //  A obj =  i -> System.out.println("in show "+i);//this also works fine
+
+
+     A obj = (int i) -> System.out.println("in show "+i);
+    obj.show(5);
     }
 }
