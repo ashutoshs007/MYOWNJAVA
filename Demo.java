@@ -1,37 +1,31 @@
-// Functional interface is a interface which only has one method
+public class Demo{
+    public static void main(String a[]){
 
-//Lambda expression works only with a functional interface(with single methods coz multiple method will confuse lambda expression whether which method to implement)
+int i=0;
+// int i=4;
+
+//int j=18/i;  //ArithmeticException: / by zero
 
 
-@FunctionalInterface
-interface A
+//try throws the error as an object
+//you have to catch as an object
+
+int j=0;
+
+try{
+    j=18/i;
+}
+catch(Exception e)
 {
- int add( int i,int j);
+    System.out.println("Something went wrong");
 }
 
+System.out.println(j);
+System.out.println("Bye");
 
 
-
-public class Demo
-{
-    public static void main(String a[])
-    {
-
-// A obj =new A()
-// {
-//    public int add(int i,int j)
-//    {
-//     return i+j;
-//    }
-// };   //this same thing can be written as below using lambda expression
-
-A obj = (i, j) ->  i+j;
-   
-
-
-int result =obj.add(5,4);
-System.out.println(result);
-
-   
     }
 }
+
+
+//catch block will be executed only in case of Exception

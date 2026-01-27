@@ -44,3 +44,18 @@ int nums[] =new int[5]; -->
 ![alt text](image-3.png)
 
 ![alt text](image-4.png)
+
+
+
+
+Errors and Exception
+
+![alt text](image-5.png)
+
+
+
+
+//Statements can be of two types
+
+1.Normal Statement
+2.Critical Statement
