@@ -1,23 +1,35 @@
 public class Demo{
     public static void main(String a[]){
 
-int i=0;
-// int i=4;
+int i=2 ;
+int j=0 ;
 
-//int j=18/i;  //ArithmeticException: / by zero
+int nums[] =new int[5];
+String str = null;
 
 
-//try throws the error as an object
-//you have to catch as an object
 
-int j=0;
 
-try{
+try
+{
     j=18/i;
+    System.out.println(str.length());
+    System.out.println(nums[1]);
+    System.out.println(nums[5]);
 }
+catch( ArithmeticException e)
+{
+System.out.println("Cannot divide by  zero ");   //  ArithmeticException  
+}
+
+catch( ArrayIndexOutOfBoundsException e)
+{
+System.out.println("Stay in your limit ");   //  ArrayIndexOutOfBoundsException 
+}
+
 catch(Exception e)
 {
-    System.out.println("Something went wrong");
+    System.out.println("Stay in your limit.");
 }
 
 System.out.println(j);
@@ -26,6 +38,3 @@ System.out.println("Bye");
 
     }
 }
-
-
-//catch block will be executed only in case of Exception
