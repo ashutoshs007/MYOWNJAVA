@@ -59,3 +59,13 @@ Errors and Exception
 
 1.Normal Statement
 2.Critical Statement
+
+
+
+
+![alt text](image-6.png)
+
+Even exception has a constructor which takes a string.
+
+
+

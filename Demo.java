@@ -1,28 +1,39 @@
+
+//how to create your own exception in java
+class NavinException extends RuntimeException
+{
+    public NavinException(String string)
+    {
+          
+        ///even Exception has a constructor
+        /// which takes a string
+        super (string);
+    
+    }
+}
+
+ 
+
 public class Demo{
     public static void main(String a[]){
 
 int i=20 ;
 int j=0 ;
 
-
-
-
-
-
 try
 {
     j=18/i;
     if(j==0)
-        throw new ArithmeticException("I do not want to print zero"); //calling catch block using throw 
+        throw new NavinException("I do not want to print zero"); //calling catch block using throw 
 
     //throw keyword is used to throw the exceptino and catch is used to catch it.
 
    
 }
-catch( ArithmeticException e){
+catch( NavinException e){
 // System.out.println("Cannot divide by  zero ");   //  ArithmeticException  
 j=18/1;
-System.out.println("that's the default output"+e);
+System.out.println("that's the default output "+e);
 }
 
 
