@@ -1,76 +1,67 @@
-<!-- In abstract class we can create abstract methods as well as normal methods
+Any line of code that can potentially throw an exception at runtime is called a Critical statement.
 
-
-Collection API -A concept
-
-Collection -An Interface
-Collections -A Class
-
-
-int num =5;
-
-int nums[] =new int[5]; -->
+Whensoever we have a critical statement ,it is always better to write that critical statement in try catch block
 
 
 
-// Collection interface belongs to java.util package
+d(){
+     __
+     __
 
-        // Most of the classes belongs to java.lang package that's why we did not imported them
+     try{
 
-        //Collection is an interface so we cannot
-        // create an object of that interface
+     __  (let's say this 3rd line is a critical statement),so we need try catch to handle the excpetion 
 
+     }
+     catch{
+        _
+     }  
+}
 
+e(){
 
-        // All interfaces extends Collection interface 
+     try{
 
-        // :-List,Queue,Set
+     __  (let's say this 1st line is a critical statement),so we need try catch to handle the excpetion 
 
-        // All these interfaces have their own class implementation
+     }
+     catch{
+        _
+     }  
 
-        // for eg;
+     __
 
-        // For List we have -ArrayList
-
-        // LinkedList
-
-        // For Set-we have HashSet
-        // Linked HashSet
-
-
-        // For Queue-we have Dequeue
-
-
-![alt text](image-3.png)
-
-![alt text](image-4.png)
+     __
+}
 
 
+another way to handle the exception of d() amd e () is to call them in c() method and put try catch there itself
 
+c(){
+        __
+        __
+        __
+        try{
+        d();
+        e();
 
-Errors and Exception
+        catch;
+        }
+        
+}
 
-![alt text](image-5.png)
-
-
-
-
-//Statements can be of two types
-
-1.Normal Statement
-2.Critical Statement
-
-
-
-
-![alt text](image-6.png)
-
-Even exception has a constructor which takes a string.
+It is also called Ducking the Exception where d() throws Excpetion and e() throws Exception to the method who is calling it,individually d() and e() do not handles the exception
 
 
 
+you can go up the ladder and write try catch block in whatsoever method you want which is calling another method
 
-![alt text](image-7.png)
+if main() has try{
+        b()
+        catch
+}
 
+and b has c and c has e and d where e and d are having critical statements then all b,c, d,e throws the Exception c says i want b to handle the exception b says i want main to handle the exception
 
+It is called ducking the excpetion for a particular method
 
